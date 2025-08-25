@@ -3,7 +3,7 @@ import http from "http"
 import { Server } from "socket.io"
 export const app = express()
 export const server = http.createServer(app)
-
+/*
 // START DB
 
 //const express = require('express');
@@ -23,7 +23,7 @@ app.get('/api/users', (req, res) => {
 //app.listen(3000, () => console.log('Server running on port 3000'));
 
 // END DB
-
+*/
 const io = new Server(server, { cors: {origin: "*" } })
 
 app.use(express.static("public"))
