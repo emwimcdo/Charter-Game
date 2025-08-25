@@ -1,4 +1,4 @@
-const mysql = require('mysql');
+import db from './db.js'
 
 const connection = mysql.createConnection({
   host: 'localhost',
@@ -15,4 +15,4 @@ connection.connect(err => {
   console.log('Connected as id ' + connection.threadId);
 });
 
-module.exports = connection;
+export default connection
