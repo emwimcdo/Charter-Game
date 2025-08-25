@@ -3,6 +3,7 @@ import http from "http"
 import { Server } from "socket.io"
 export const app = express()
 export const server = http.createServer(app)
+console.log("Server.js Online")
 /*
 // START DB
 
