@@ -12,7 +12,7 @@ let hexColors = []
 let times = 0
 let mult = 1
 
-const socket = io("http://192.168.1.46:3000")
+const socket = io("https://charter-game.onrender.com")
 
 let pick = false
 let prevTool = ""
@@ -180,7 +180,7 @@ function isPointInPolygon(px, py, vertices) {
 
 
 function draw() {
-    console.log(addingNode)
+    //console.log(addingNode)
     translate(offsetX, offsetY)
     background(220);
     fill(circleColor);
