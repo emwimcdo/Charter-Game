@@ -7,7 +7,8 @@ export const server = http.createServer(app)
 // START DB
 
 //const express = require('express');
-const db = require('./db');
+import db from './db.js'
+
 //const app = express();
 
 app.use(express.json());
