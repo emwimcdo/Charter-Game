@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Charter Game</title>
+        <link rel="stylesheet" href="./styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+    </head>
+    <body>
+        <header class="navHeader">
+            <nav class="navHolder">
+                <a class="menu" href="index.html">Charter Game</a>
+                <a class="menu" href="map.html">Map</a>
+                <a class="menu" href="rules.html">Rules</a>
+                <a class="menu" href="printouts.html">Printouts</a>
+            </nav>
+        </header>
+        <div class="toolHolder" id="toolHolder">
+            <button id="joinRoomButton">Join/Create Room</button>
+            <h1>Map</h1>
+            <label>Tool: </label>
+            <select title="toolPicker" id="tool">
+                <option value="drag">Drag</option>
+                <option value="colorHex">Color Hex</option>
+                <!--<option value="draw">Draw</option>-->
+                <option value="addNode">Add Node</option>
+            </select>
+            <div class="colorHex" id="colorHexDiv">
+                <label>Red: </label>
+                <input title="Red" type="range" id="hexColorRed" min="0" max="255">
+                <label>Green: </label>
+                <input title="Green" type="range" id="hexColorGreen" min="0" max="255">
+                <label>Blue: </label>
+                <input title="Blue" type="range" id="hexColorBlue" min="0" max="255">
+                <label id="sample">Sample Color</label>
+            </div>
+            <div class="addNode" id="addNode">
+                <label>Text (Including Emojis): </label>
+                <input type="text" id="nodeToAdd" placeholder="Node/Label">
+                <button onclick="createNode()">Attach</button>
+                <button id="defaultSize">Default Text Size</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+        <script src="sketch.js"></script>
+    </body>
+</html>

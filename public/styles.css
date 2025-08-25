@@ -1,0 +1,151 @@
+* {
+    font-family: sans-serif;
+}
+
+.menu {
+    color: yellow;
+    background-color: darkgreen;
+    text-decoration: none;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 10px;
+    display: block;
+    position: relative;
+    height: 20px;
+    width: 10rem;
+    text-align: center;
+}
+
+.menu:hover {
+    color: darkgreen;
+    background-color: yellow;
+    text-decoration: none;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 10px;
+    display: block;
+    position: relative;
+    width: 10rem;
+    text-align: center;
+}
+
+.logoText {
+    color: black;
+}
+
+.navHolder {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navHeader {
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+}
+
+.toolHolder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+#profilePic {
+    height: 2.5rem;
+    position: absolute;
+    right: 0rem;
+    cursor: pointer;
+}
+
+.dropdownBtn {
+    position: absolute;
+    background-color: darkgreen;
+    color: yellow;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    width: 10rem;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+    right: 50px;
+}
+
+.dropdownBtn:hover {
+    background-color: yellow;
+    color: darkgreen;
+    cursor: pointer;
+
+}
+
+.dropdownOption {
+    display: none;
+    padding-left: 0px;
+    position: relative;
+    left: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    width: calc(100% - 10px);
+    box-sizing: border-box;
+    color: yellow;
+    background-color: darkgreen;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.dropdownOption:hover {
+    color: darkgreen;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.dropdownMenu {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background-color: darkgreen;
+    border-radius: 10px;
+    width: 10rem;
+    right: 56px;
+    top: 50px;
+}
+
+.customDropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bigPfp {
+    align-self: center;
+    justify-self: center;
+    width: 100px;
+    margin: 10px;
+}
+
+.accountForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.invis {
+    display: none;
+}
+
+.textBtn {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.textBtn:click {
+    color: blue;
+}
