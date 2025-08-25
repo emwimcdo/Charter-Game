@@ -239,8 +239,8 @@ function draw() {
     }
     if (addNode) {
         nodeAdder.style.display = "block"
-        nodesX[node] = mouseX * scale - offsetX
-        nodesY[node] = mouseY * scale - offsetY
+        nodesX[node] = (mouseX - offsetX) * scale
+        nodesY[node] = (mouseY - offsetY) * scale
         nodesSize[node] = textBigness
         nodesContent[node] = addingNode
     }
