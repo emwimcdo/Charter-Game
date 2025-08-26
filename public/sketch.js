@@ -127,7 +127,7 @@ function setup() {
       hexColors[row][col] = color(150, 150, 150); // default gray
     }
   }
-  console.log(hexColors.values)
+  console.log(JSON.stringify(hexColors))
   socket.on("initState", data => {
     updateNodes(
       data.nodes.content,
