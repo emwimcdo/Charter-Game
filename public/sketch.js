@@ -127,6 +127,7 @@ function setup() {
       hexColors[row][col] = color(150, 150, 150); // default gray
     }
   }
+  console.log(hexColors)
   socket.on("initState", data => {
     updateNodes(
       data.nodes.content,
@@ -135,7 +136,12 @@ function setup() {
       data.nodes.size
     )
     if (Array.isArray(data?.hexArray)) {
-      hexColors = data.hexArray.map(row => [...row])
+      /*for (let row = 0; row < rows; row++) {
+        hexColors[row] = []
+      for (let col = 0; col < columns; col++) {
+        //hexColors[row][col] =  // default gray
+      }
+      */
     }
 
     hexColors = data.hexArray
