@@ -43,9 +43,9 @@ io.on("connection", socket => {
                 empty: true
             }
             for (let row = 0; row < 120; row++) {
-              hexArray[row] = [];
+              rooms.roomCode.hexArray[row] = [];
               for (let col = 0; col < 120; col++) {
-                hexArray[row][col] = color(150, 150, 150); // default gray
+                rooms.roomCode.hexArray[row][col] = [150, 150, 150] // default gray
               }
             }
             console.log(`Room ${roomCode} created`)
