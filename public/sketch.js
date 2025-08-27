@@ -35,7 +35,7 @@ joinRoomButton.addEventListener("click", () => {
   const code = prompt("Join/Create a room. If the code entered is not a room code, a new room will be created.", "Room Code Here")
   if (code && code.trim() !== "") {
     joinCode = code.trim()
-    socket.emit("joinRoom", joinCode.trim(), hexColors);
+    socket.emit("joinRoom", joinCode.trim()/*, hexColors*/);
     console.log("Join request sent:", joinCode.trim());
     joinRoomButton.style.display = "none"
     const holder = document.getElementById("toolHolder");
