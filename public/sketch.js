@@ -135,7 +135,15 @@ function setup() {
       data.nodes.size
     )
     if (Array.isArray(data?.hexArray)) {
-      hexColors = data.hexArray
+
+        for (let r = 0; r < rows; r++) {
+          for (let c = 0; c < columns; c++) {
+            // data.hexArray[r][c] is something like [150, 150, 150]
+            hexColors[r][c] = color(...data.hexArray[r][c]);
+          }
+        }
+      
+
     }
 
     //hexColors = data.hexArray
