@@ -34,26 +34,28 @@ const rooms = {}
 io.on("connection", socket => {
     console.log("Client connected: " + socket.id)
 
-    socket.on("joinRoom", roomCode => {
-        if (!rooms[roomCode]) {
-            rooms[roomCode] = {
-                hexArray: [], // fill defaults later
+    socket.on("joinRoom", data => {
+        if (!rooms[data.roomCode]) {
+            rooms[data.roomCode] = {
+                hexArray: data.hexColors, // fill defaults later
                 nodes: { content: [], x: [], y: [], size: [] },
                 tiles: {},
                 empty: true
             }
+            /*
             for (let row = 0; row < 120; row++) {
-              rooms.roomCode.hexArray[row] = [];
+              rooms.data.roomCode.hexArray[row] = [];
               for (let col = 0; col < 120; col++) {
-                rooms.roomCode.hexArray[row][col] = [150, 150, 150] // default gray
+                rooms.data.roomCode.hexArray[row][col] = [150, 150, 150] // default gray
               }
             }
-            console.log(`Room ${roomCode} created`)
+            */
+            console.log(`Room ${data.roomCode} created`)
         }
         else {
-            socket.emit("initState", rooms[roomCode])
+            socket.emit("initState", rooms[data.roomCode])
         }
-        socket.join(roomCode)
+        socket.join(data.roomCode)
     })
 
     socket.on("tileChange", ({roomId, row, col, color}) => {
